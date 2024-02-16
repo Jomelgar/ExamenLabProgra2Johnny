@@ -60,16 +60,16 @@ public class UberSocial {
         
         if(!user1.equals(user2)){
             if(social1 != null && social2 != null){
-            if(social1 instanceof Facebook && social2 instanceof Facebook){
-                sociales.get(sociales.indexOf(social1)).addFriend(user2);
-                sociales.get(sociales.indexOf(social2)).addFriend(user1);
-                JOptionPane.showMessageDialog(null, user1 + " y " + user2 + " ahora son amigos.");
-            }else if(social1 instanceof Twitter && social2 instanceof Twitter){
-                sociales.get(sociales.indexOf(social1)).addFriend(user2);
-                JOptionPane.showMessageDialog(null, user1 + " sigue a " + user2 + ".");
-            }else{
-                JOptionPane.showMessageDialog(null, "Estos usuarios no son compatibles.");
-            }
+                if(social1 instanceof Facebook && social2 instanceof Facebook){
+                    sociales.get(sociales.indexOf(social1)).addFriend(user2);
+                    sociales.get(sociales.indexOf(social2)).addFriend(user1);
+                    JOptionPane.showMessageDialog(null, user1 + " y " + user2 + " ahora son amigos.");
+                }else if(social1 instanceof Twitter && social2 instanceof Twitter){
+                    sociales.get(sociales.indexOf(social1)).addFriend(user2);
+                    JOptionPane.showMessageDialog(null, user1 + " sigue a " + user2 + ".");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Estos usuarios no son compatibles.");
+                }
             }else{
                 JOptionPane.showMessageDialog(null, "Uno de estos usuarios no existen.");
             }
